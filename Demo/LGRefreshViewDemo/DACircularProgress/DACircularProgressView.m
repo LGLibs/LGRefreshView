@@ -1,9 +1,9 @@
 //
-//  DACircularProgressView.m
-//  DACircularProgress
+// DACircularProgressView.m
+// DACircularProgress
 //
-//  Created by Daniel Amitay on 2/6/12.
-//  Copyright (c) 2012 Daniel Amitay. All rights reserved.
+// Created by Daniel Amitay on 2/6/12.
+// Copyright (c) 2012 Daniel Amitay. All rights reserved.
 //
 
 #import "DACircularProgressView.h"
@@ -46,9 +46,9 @@
     CGRect rect = self.bounds;
     CGPoint centerPoint = CGPointMake(rect.size.width / 2.0f, rect.size.height / 2.0f);
     CGFloat radius = MIN(rect.size.height, rect.size.width) / 2.0f;
-    
+
     BOOL clockwise = (self.clockwiseProgress != 0);
-    
+
     CGFloat progress = MIN(self.progress, 1.0f - FLT_EPSILON);
     CGFloat radians = 0;
     if (clockwise) {
@@ -56,7 +56,7 @@
     } else {
         radians = (float)(3 * M_PI_2 - (progress * 2.0f * M_PI));
     }
-    
+
     CGContextSetFillColorWithColor(context, self.trackTintColor.CGColor);
     CGMutablePathRef trackPath = CGPathCreateMutable();
     CGPathMoveToPoint(trackPath, NULL, centerPoint.x, centerPoint.y);
@@ -65,7 +65,7 @@
     CGContextAddPath(context, trackPath);
     CGContextFillPath(context);
     CGPathRelease(trackPath);
-    
+
     if (progress > 0.0f) {
         CGContextSetFillColorWithColor(context, self.progressTintColor.CGColor);
         CGMutablePathRef progressPath = CGPathCreateMutable();
@@ -76,13 +76,13 @@
         CGContextFillPath(context);
         CGPathRelease(progressPath);
     }
-    
+
     if (progress > 0.0f && self.roundedCorners) {
         CGFloat pathWidth = radius * self.thicknessRatio;
         CGFloat xOffset = radius * (1.0f + ((1.0f - (self.thicknessRatio / 2.0f)) * cosf(radians)));
         CGFloat yOffset = radius * (1.0f + ((1.0f - (self.thicknessRatio / 2.0f)) * sinf(radians)));
         CGPoint endPoint = CGPointMake(xOffset, yOffset);
-        
+
         CGRect startEllipseRect = (CGRect) {
             .origin.x = centerPoint.x - pathWidth / 2.0f,
             .origin.y = 0.0f,
@@ -91,7 +91,7 @@
         };
         CGContextAddEllipseInRect(context, startEllipseRect);
         CGContextFillPath(context);
-        
+
         CGRect endEllipseRect = (CGRect) {
             .origin.x = endPoint.x - pathWidth / 2.0f,
             .origin.y = endPoint.y - pathWidth / 2.0f,
@@ -140,7 +140,7 @@
         [circularProgressViewAppearance setThicknessRatio:0.3f];
         [circularProgressViewAppearance setRoundedCorners:NO];
         [circularProgressViewAppearance setClockwiseProgress:YES];
-        
+
         [circularProgressViewAppearance setIndeterminateDuration:2.0f];
         [circularProgressViewAppearance setIndeterminate:NO];
     }
@@ -205,7 +205,7 @@
 {
     [self.layer removeAnimationForKey:@"indeterminateAnimation"];
     [self.circularProgressLayer removeAnimationForKey:@"progress"];
-    
+
     CGFloat pinnedProgress = MIN(MAX(progress, 0.0f), 1.0f);
     if (animated) {
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"progress"];

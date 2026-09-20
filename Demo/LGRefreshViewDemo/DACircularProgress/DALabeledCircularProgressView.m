@@ -1,9 +1,9 @@
 //
-//  DALabeledCircularProgressView.m
-//  DACircularProgressExample
+// DALabeledCircularProgressView.m
+// DACircularProgressExample
 //
-//  Created by Josh Sklar on 4/8/14.
-//  Copyright (c) 2014 Shout Messenger. All rights reserved.
+// Created by Josh Sklar on 4/8/14.
+// Copyright (c) 2014 Shout Messenger. All rights reserved.
 //
 
 #import "DALabeledCircularProgressView.h"

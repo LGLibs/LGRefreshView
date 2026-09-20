@@ -1,9 +1,9 @@
 //
-//  RefreshTableViewController.m
-//  LGRefreshViewDemo
+// RefreshTableViewController.m
+// LGRefreshViewDemo
 //
-//  Created by Grigory Lutkov on 21.02.15.
-//  Copyright (c) 2015 Grigory Lutkov. All rights reserved.
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2015 Grigorii Lutkov <grigorii@lutkov.dev>
 //
 
 #import "RefreshTableViewController.h"
@@ -145,7 +145,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
 
     cell.textLabel.text = _updateString;
-    
+
     return cell;
 }
 
