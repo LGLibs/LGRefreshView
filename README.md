@@ -4,8 +4,7 @@ iOS pull to refresh for UIScrollView, UITableView and UICollectionView.
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/LGLibs/ReadmeFiles/master/LGRefreshView/Preview.gif" width="250"/>
-<img src="https://raw.githubusercontent.com/LGLibs/ReadmeFiles/master/LGRefreshView/1.png" width="250"/>
+<img src="https://raw.githubusercontent.com/LGLibs/ReadmeFiles/master/LGRefreshView/Preview.gif" width="250"/> <img src="https://raw.githubusercontent.com/LGLibs/ReadmeFiles/master/LGRefreshView/1.png" width="250"/>
 
 ## Installation
 
